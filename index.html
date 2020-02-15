@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+  
+  <head>
+    <meta charset = "UTF-8">
+    <title>CodePen - Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+    <div class='calc'>
+      <div class='total_screen' value='0'>0</div>
+      <div class='bar_top'></div>
+      <div class='bar_name'>
+        <h1>TI-1103</h1> 
+      </div>
+    
+    
+      <div class='wrapper'>
+        
+        <div class='top subgrid'>
+        <button id='off' data-action='off'>OFF</button>
+        <button data-action='delete'>DEL</button>
+        <button data-action='percent'>%</button>
+        </div>
+        
+        <div class='operator subgrid'>
+        <button data-action='divide'>/</button>
+        <button data-action='multiply'>x</button>  
+        <button data-action='minus'>-</button>       
+        <button data-action='add'>+</button>
+        <button data-action='equal'>=</button>
+        </div>
+        
+        <div class='digit subgrid'>
+        <button value='7'>7</button>
+        <button value='8'>8</button>
+        <button value='9'>9</button> 
+        <button value='4'>4</button>
+        <button value='5'>5</button>
+        <button value='6'>6</button>
+        <button value='1'>1</button>
+        <button value='2'>2</button>
+        <button value='3'>3</button>
+        <button data-action='clear' id='clear'>ON/C</button>
+        <button value='0'>0</button>
+        <button data-action='dot'value='dot'>.</button>
+        </div>
+       
+      
+      </div>
+   </div>
+ 
+   <script  src="./script.js"></script>
+
+</body>
+</html>

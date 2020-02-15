@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+   
+}
+
+.calc {
+  margin:50px auto 50px;
+  border: 20px solid red;
+  border-radius: 15px;
+  max-width: 400px; 
+  background-color: red;
+}
+
+.total_screen {
+  border: none;
+  background-color: #64786c;
+  font-size: 50px;
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  font-size: 40px;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.bar_top {
+  width:100%;
+  height:20px;
+  margin-bottom:1px;
+  background-color: green;
+}
+
+.bar_name {
+  width:100%;
+  height:70px;
+  margin:5px 0 5px ;
+ 
+  background-color: green;
+  border:none;
+  color: red;
+  text-align: right;
+  text-justify: center;
+  font-size: 25px;
+}
+
+button {
+  height: 50px;
+  background-color:coral;
+  border: 3px solid red;
+  border-radius: 5px;
+  font-size: 30px;
+  color: white;
+}
+
+#clear, #off {
+  color: green;
+}
+
+
+.operator button, .top button{
+  background-color:darkred;
+  color: white;
+  border: 3px solid red;
+}
+
+button:hover {
+  
+}
+.wrapper, .subgrid {
+  display: grid;
+  
+}
+.wrapper {
+  grid-template-areas:
+    "top top top oper"
+    ". . . oper"
+    "digit digit digit oper"
+    "digit digit digit oper"
+    "digit digit digit oper"
+    "digit digit digit oper";
+   grid-auto-columns: 1fr;
+  margin-top: 30px;
+}
+.top {
+ grid-area: top;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.operator{
+  grid-area: oper;
+  margin-left: 15px;  
+}
+
+.digit{
+  grid-area: digit;
+  grid-template-columns: repeat(3, 1fr);
+}
