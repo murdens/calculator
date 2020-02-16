@@ -46,7 +46,12 @@ body {
   border:none;
   color: red;
   text-align: right;
+<<<<<<< HEAD
   font-size: 25px;
+=======
+  text-justify: center;
+  font-size: 20px;
+>>>>>>> 6989b9166907f60c568c534ea4b06c572042dc8c
 }
 
 button {
@@ -69,9 +74,7 @@ button {
   border: 3px solid red;
 }
 
-button:hover {
-  
-}
+
 .wrapper, .subgrid {
   display: grid;
   
