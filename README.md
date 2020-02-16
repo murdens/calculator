@@ -8,6 +8,17 @@ Fundamentals 5 - Calculator project
 
 I still have my Texas Instruments calculator from the mid 80s so used this for the style.  I had to read a number of calculator tutorials to get going on the scripting.
 
+Approach:
+> Identify key pressed
+> Keep first and subsequent numbers and display
+> When operator pressed need to store and operator key type
+> Return calculation
+> Include decimal when pressed but not more than one
+> DEL to remove last number
+> Set display to 0 if ON/C key pressed and clear any attributes set
+> OFF key removes display and any attributes set
+
+
 Work in progress:
-- delete button requires function
-- order of calculation bugs
+- ordering of calculation - requires code refactor
+- % to be used in calculation

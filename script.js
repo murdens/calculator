@@ -36,32 +36,7 @@ keys.addEventListener('click', e => {
     calc.dataset.previousKeyType = 'dot'
     }
     
-    if (action === 'add'       ||
-        action === 'minus'     ||
-        action === 'multiply'  ||
-        action === 'divide'    ||
-        action === 'percent')
-       {
-       key.classList.add('is-depressed')
-       calc.dataset.previousKeyType = 'operator'
-       calc.dataset.firstN = displayN
-       calc.dataset.operator = action
-     }
-    
-    const pccalc = (n1) => {
-    const firstN = parseFloat(n1)
-    const operator = calc.dataset.operator
-    if (operator === 'percent') return firstN/100
-    }
-    
-    if (action === 'percent') {
-      const firstN = calc.dataset.firstN
-      display.textContent = pccalc(firstN)
-      calc.dataset.previousKeyType = 'percent'
-      
-    }
-    
-    
+        
     const calculate =(n1, operator, n2) => {
     let total = ''
     const firstN = parseFloat(n1)
@@ -72,8 +47,49 @@ keys.addEventListener('click', e => {
     if (operator === 'divide')  return firstN / lastN
     }
   
-    if (action === 'equal'){
     
+    if (action === 'add'       ||
+        action === 'minus'     ||
+        action === 'multiply'  ||
+        action === 'divide'    ||
+        action === 'percent'
+       ){
+       const firstN = calc.dataset.firstN
+       const operator = calc.dataset.operator
+       const lastN = displayN
+  
+       if (firstN && 
+           operator &&
+           previousKeyType !=='operator' &&
+           previousKeyType !=='equal'
+         ) {
+         const calcval = calculate(firstN, operator, lastN)
+         display.textContent = calcval
+         calc.dataset.firstN = calcval
+         } else {
+         calc.dataset.firstN = displayN  
+         }
+         key.classList.add('is-depressed')
+         calc.dataset.previousKeyType = 'operator'
+         calc.dataset.operator = action
+       }
+    
+   
+    const pccalc = (n1) => {
+    const firstN = parseFloat(n1)
+    const operator = calc.dataset.operator
+    if (operator === 'percent') return firstN/100
+    }
+    
+    
+    if (action === 'percent') {
+      const firstN = calc.dataset.firstN
+      display.textContent = pccalc(firstN)
+      calc.dataset.previousKeyType = 'percent'  
+    }
+    
+      
+    if (action === 'equal'){
       const firstN = calc.dataset.firstN
       const operator = calc.dataset.operator
       const lastN = displayN
@@ -109,9 +125,9 @@ keys.addEventListener('click', e => {
      display.textContent = ''
     }
     
-    
+
     if (action === 'delete') {
-      
+    display.textContent = display.textContent.slice(0,-1);  
     calc.dataset.previousKeyType = 'delete'
     }
     
@@ -121,3 +137,14 @@ keys.addEventListener('click', e => {
    
   }
 })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
