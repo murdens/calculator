@@ -44,7 +44,8 @@ keys.addEventListener('click', e => {
     if (operator === 'add') return firstN + lastN
     if (operator === 'minus') return firstN - lastN
     if (operator === 'multiply') return firstN * lastN
-    if (operator === 'divide')  return firstN / lastN
+    if (operator === 'divide')  return firstN / lastN 
+    
     }
   
     
@@ -63,7 +64,9 @@ keys.addEventListener('click', e => {
            previousKeyType !=='operator' &&
            previousKeyType !=='equal'
          ) {
+          
          const calcval = calculate(firstN, operator, lastN)
+         
          display.textContent = calcval
          calc.dataset.firstN = calcval
          } else {
@@ -99,8 +102,9 @@ keys.addEventListener('click', e => {
         firstN = displayN
         lastN = calc.dataset.modN
       }
-    
-    display.textContent = calculate(firstN, operator, lastN)
+      
+      display.textContent = calculate(firstN, operator, lastN)
+      
     }
     calc.dataset.modN = lastN
     calc.dataset.previousKeyType = 'equal'
