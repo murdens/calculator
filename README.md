@@ -1,6 +1,6 @@
 @TheOdinProject
 
-Fundamentals 5 - Calculator project
+# Fundamentals 5 - Calculator project
 
 - CSS Grid
 - Use of attributes to store data
@@ -8,7 +8,9 @@ Fundamentals 5 - Calculator project
 
 I still have my Texas Instruments calculator from the mid 80s so used this for the style.  I had to read a number of calculator tutorials to get going on the scripting.
 
-Approach:
+<strong>Hosted:</strong> https://murdens.github.io/calculator/
+
+<strong>Approach:</strong>
 - Identify key pressed
 - Keep first and subsequent numbers and display
 - When operator pressed need to store and operator key type
@@ -19,6 +21,6 @@ Approach:
 - OFF key removes display and any attributes set
 
 
-Work in progress:
+<strong>Work in progress:</strong>
 - ordering of calculation - requires code refactor
 - % to be used in calculation
